@@ -71,8 +71,8 @@ function ajaxAuth(){
 				//$('#nav_fountain').show();
 				$('#user_pow').show();
 				$('#unverified_work').show();
-				$('#loadcredo').hide();
-                                $('#user-profile-menu').show();
+				$('.loadcredo').hide();
+                                $('.user-profile-menu').show();
 
 				  $('#authenticate').hide();
 				  var pr = JSON.stringify(data.profile);
@@ -630,7 +630,7 @@ $(document).ready(function(){
 
 
 
-	$('#authenticate').click(function(){
+	$('.authenticate').click(function(){
 		authentication();
 	});
 	
@@ -645,7 +645,7 @@ $(document).ready(function(){
 	});
 	
 	
-	$('#loadcredo').click(function(){
+	$('.loadcredo').click(function(){
 			$('#register_btn').show();
 			$('#hideme').show();
             
@@ -717,7 +717,7 @@ $(document).ready(function(){
     
 
     
-    $('#inventory_nav').click(function(){
+    $('.inventory_nav').click(function(){
         var skip = 0;
         var limit = 100;
 		var url = '../inventory/getbycategory/' + skip + '/' + limit;

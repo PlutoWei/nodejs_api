@@ -237,13 +237,13 @@ height: auto;
         <ul class="nav-menu">
 
              <li><a href="#home" data-toggle="tab">Home</a></li>
-                <li><a href="#register" id="loadcredo" data-toggle="tab">Register</a></li>
-   <li><a href="#inventory" id="inventory_nav" data-toggle="tab">Inventory</a></li>
+                <li><a href="#register" class="loadcredo" data-toggle="tab">Register</a></li>
+   <li><a href="#inventory" class="inventory_nav" data-toggle="tab">Inventory</a></li>
    <li><a href="#cart" data-toggle="tab">Cart</a></li>
 
-                       <li><a id="authenticate" data-toggle="modal" data-target="#myModal" >Log-in</a></li>
+                       <li><a class="authenticate" data-toggle="modal" data-target="#myModal" >Log-in</a></li>
                         <li class="dropdown">
-                            <a id='user-profile-menu' class="dropdown-toggle" data-toggle="dropdown">Profile
+                            <a class="user-profile-menu" class="dropdown-toggle" data-toggle="dropdown">Profile
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a id="upload" data-toggle="modal" data-target="#uploadModal" >Upload Photo</a></li>
@@ -1821,7 +1821,7 @@ window.onload = function() {
 
     $( document ).ready(function() {
 
-    $("#inventory_nav").on('click',function(){
+    $(".inventory_nav").on('click',function(){
       console.log('inventory');
     });
 

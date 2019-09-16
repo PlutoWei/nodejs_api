@@ -6,27 +6,56 @@
   function loggedIn() {
     return localStorage.getItem('token') && !!localStorage.getItem('profile');
   }
+
+  function showHide(selector,show){    
+    $(selector).each(function(i,element){
+      if (show)
+        $(element).show();
+      else
+	$(element).hide();
+    })
+  }
+  
+  function showEach(selector) {
+    showHide(selector,true);
+  }
+  
+  function hideEach(selector) {
+    showHide(selector,false);
+  }
   
   function filterAuthFields() {
     if (loggedIn()) {
-      $("#authenticate").css({display:"none"});
-      $("#loadcredo").css({display:"none"});
+      $(".authenticate").hide();
+      $(".loadcredo").hide();
+
+
+      showEach(".dropdown");
+      showEach(".inventory_nav");
       
-      $(".dropdown").css({display: "block"});
-      $("#user-profile-menu").css({display: "block"});
-      $("#inventory_nav").css({display: "block"});
+      $("#user-profile-menu").hide();      
+      ////////////////////////////////////////////////////////////////////////
+      // $(".inventory_nav").each(function(index,inventoryElement) {	    //
+      // 	$(inventoryElement).css({display: "block"})		    //
+      // });								    //
+      // $(".dropdown").each(function(index,dropdown) {			    //
+      // 	$(dropdown).css({display: "block"});			    //
+      // });								    //
+      ////////////////////////////////////////////////////////////////////////
     }
     else {
-      $("#user-profile-menu").css({display: "none"});
-      $("#inventory_nav").css({display: "none"});
+      hideEach(".user-profile-menu");
+      
+      hideEach(".inventory_nav");
 
-      $(".dropdown").css({display: "none"});
+      hideEach(".dropdown")
+      
       $("#logout").removeClass("active");
       $("#logout").parent().removeClass("active");
 
       
-      $("#authenticate").css({display:"block"});
-      $("#loadcredo").css({display:"block"});
+      showEach(".authenticate");
+      showEach(".loadcredo");
     }
   }
 
@@ -40,6 +69,15 @@
   
   // Filter un-/auth fields
   filterAuthFields();
+
+  $(document).on('click','#logout',function(e){
+    logOut(); 
+  });
+
+  $(window).on('resize',function(){
+    console.log('resized');
+    filterAuthFields();
+  });
   
   // Initiate the wowjs animation library
   new WOW().init();
@@ -66,10 +104,6 @@
     $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
     $('body').append('<div id="mobile-body-overly"></div>');
     $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
-
-    $(document).on('click','#logout',function(e){
-      logOut(); 
-    });
     
     $(document).on('click', '.menu-has-children i', function(e) {
       $(this).next().toggleClass('menu-item-active');
@@ -92,13 +126,10 @@
           $('#mobile-body-overly').fadeOut();
         }
       }
-
-      filterAuthFields();
       
     });
   } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
     
-    filterAuthFields();
     
     $("#mobile-nav, #mobile-nav-toggle").hide();
   }
