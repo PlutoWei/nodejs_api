@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title><%=title%></title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="/css/font-awesome.css"> <!-- load fontawesome -->
+	<link rel="stylesheet" href="/css/style.css"> <!-- load fontawesome -->	
+	
+	<script src="/js/jquery-3.1.1.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	
+  </head>
+<body>
+
+
+<div class="container">
+
+
+<div class = "col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/profile"><strong>ZetaWork</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+	  <li class="active"><a href="/profile">Home</a></li>
+    </ul>
+  </div>
+</nav>
+
+	<h1><%=title %></h1>
+	
+	<form action="/work/submit_work/<%=category%>/<%=id%>/<%=data.payment%>" method="post">
+		
+		<div class="form-group">
+		<label>Instruction: </label>	
+			 <textarea readonly required class="form-control" name="jobDetail" rows="7"><%=data.jobDetail%></textarea>
+		</div>
+		<div class="form-group">
+			<label>Proof Required: </label>
+			<textarea readonly required class="form-control" name="proof" rows="5"><%=data.proof%></textarea>
+		</div>
+		
+		<div class="form-group">
+			<input type="hidden" value="<%=category%> name="category">
+		</div>
+		
+		<div class="form-group">
+			<label>Submit Proof </label>
+			<textarea required class="form-control" name="proof_submit" rows="5"></textarea>
+		</div>
+		
+		<img align = "center" src="/captcha" alt="Smiley face" height="120px" width="450px">
+		
+		<div class="form-group">
+			<label>Enter Captcha: </label>
+			<input  type="text" class="form-control" name="captcha" required>
+		</div>
+		
+		
+		<div align="center">
+		<button  type="submit" class="btn btn-warning btn-lg">Submit</button>
+		<div>
+	</form>
+	<div>
+
+	     
+	    </div>
+	<hr>
+
+	
+</div>
+
+</div>
+
+
+	  </div>
+	</div>
+  </body>
+</html>

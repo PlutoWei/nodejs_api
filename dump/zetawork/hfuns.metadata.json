@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"zetawork.hfuns"},{"v":2,"unique":true,"key":{"call_id":1},"name":"call_id_1","ns":"zetawork.hfuns","background":true}],"uuid":"c9eb11501b2c4fea83663fb1d53d2567"}

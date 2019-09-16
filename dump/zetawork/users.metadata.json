@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"zetawork.users"},{"v":2,"unique":true,"key":{"email":1},"name":"email_1","ns":"zetawork.users","background":true}],"uuid":"980221707eba4dc1a0ba37296117c9e2"}

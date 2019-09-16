@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"zetawork.fbnames"},{"v":1,"unique":true,"key":{"names":1},"name":"names_1","ns":"zetawork.fbnames","background":true}]}

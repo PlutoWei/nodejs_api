@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=title%></title>
+	
+	<link rel="stylesheet" href="/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="/css/font-awesome.css"> <!-- load fontawesome -->
+	<link rel="stylesheet" href="/css/style.css"> <!-- load fontawesome -->	
+	
+	<script src="/js/jquery-3.1.1.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+  </head>
+<body>
+
+
+<div class="container">
+
+ <div class="container" style="max-width: 700px; padding-top: 70px;">
+
+	<h1>Job Administration</h1>
+	
+	<form action="/work/job_update/<%=todo%>/<%=category%>/" method="post">
+		
+		<div class="form-group">
+			<label>Title: </label>
+			<input required type="text" class="form-control" name="title" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>Category:</label>
+			<select class="form-control" name="category">
+				<option value="1">Forum Posting</option>
+				<option value="2">Blog Commenting</option>
+				<option value="3">Youtube Commenting</option>
+				<option value="4">Yahoo Answers</option>
+				<option value="5">Write Review</option>
+				<option value="6">Find Lead</option>
+				<option value="7">Write Article</option>
+				<option value="8">Create Video</option>
+				<option value="9">Other</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<label>Payment:</label>
+			<input required type="number" class="form-control" name="payment" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>ttr:</label>
+			<input required type="number" class="form-control" name="ttr" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>ttf: </label>
+			<input required type="number" class="form-control" name="ttf" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>numberOrder: </label>
+			<input required type="number" class="form-control" name="numberOrder" value="">
+		</div>
+		
+		<div>
+			<label>jobDetail: </label>	
+			 <textarea required class="form-control" name="jobDetail" rows="7"></textarea>
+		</div>
+		<div class="form-group">
+			<label>proof: </label>
+			<textarea required class="form-control" name="proof" rows="5"></textarea>
+		</div>
+		
+		<div class="form-group">
+			<label>nVerification: </label>
+			<input required readonly type="text" class="form-control" name="nVerification" value="0">
+		</div>
+		
+		<div class="form-group">
+			<label>jobOwner: </label>
+			<input required type="text" class="form-control" name="jobOwner" value="">
+		</div>
+		<div class="form-group">
+			<label>password: </label>
+			<input required type="text" class="form-control" name="password" value="">
+		</div>
+		
+		<div align="center">
+		<button  type="submit" class="btn btn-warning btn-lg">Update</button>
+		<div>
+	</form>
+	<div>
+
+	     
+	    </div>
+	<hr>
+
+	
+</div>
+
+</div>
+
+
+	  </div>
+	</div>
+  </body>
+</html>

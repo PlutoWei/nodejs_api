@@ -1,0 +1,32 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Bit Worker</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<link rel="stylesheet" href="/css/style.css"> <!-- load fontawesome -->
+	
+	<script src="/js/socket.io.js"></script>
+<script>
+  var socket = io();
+</script>
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body>
+    <div style="background:#e0e0eb; height:250px" class="container well">
+        <div  class="jumbotron text-center">
+			<br>
+            <h1>Easy task for easy money!</h1>
+            <br>
+			 <br>
+            <p>Login or Register with:</p>
+			<br>
+            <a href="/login" class="btn btn-primary"></span> Login</a>
+            <a href="/signup/" class="btn btn-primary"></span> Signup</a>
+        </div>
+    </div>
+</body>
+</html>

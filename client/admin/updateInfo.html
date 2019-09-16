@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Administration</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+<body>
+
+
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1>Job Administration</h1>
+	
+	<form action="/jobcategory/<%=category%>/<%=todo%>" method="post">
+	
+		<div class="form-group">
+			<label>password: </label>
+			<input required type="text" class="form-control" name="password" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>Title: </label>
+			<input required type="text" class="form-control" name="title" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>Category:</label>
+			<input required type="text" class="form-control" name="category%" value="<%=category%>">
+		</div>
+		
+		<div class="form-group">
+			<label>Payment:</label>
+			<input required type="number" class="form-control" name="payment" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>ttr:</label>
+			<input required type="number" class="form-control" name="ttr" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>ttf: </label>
+			<input required type="number" class="form-control" name="ttf" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>numberOrder: </label>
+			<input required type="number" class="form-control" name="numberOrder" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>jobDetail: </label>
+			<input required type="text" class="form-control" name="jobDetail" value="">
+		</div>
+		<div class="form-group">
+			<label>proof: </label>
+			<input required type="text" class="form-control" name="proof" value="">
+		</div>
+		
+		<div class="form-group">
+			<label>nVerification: </label>
+			<input required readonly type="text" class="form-control" name="country" value="0">
+		</div>
+		
+		
+		<div align="center">
+		<button  type="submit" class="btn btn-warning btn-lg">Update</button>
+		<div>
+	</form>
+	<div>
+
+	     
+	    </div>
+	<hr>
+
+	
+</div>
+
+</div>
+
+
+	  </div>
+	</div>
+  </body>
+</html>

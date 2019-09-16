@@ -1,0 +1,235 @@
+<div class="tab-pane tab-content" id="faq">
+						<div class='well'>
+								
+								<br>
+								<h1>EARNINGS<h1>
+								<h3>How to earn? </h3>
+								<p>
+								<strong>Earnings</strong> are determined by different task such as Forum posting, Commenting (social media comments, forum comments, and blog comments), 
+								Creating product reviews, Watching videos and more. 
+								
+								<p>
+								<strong>Note:</strong> There is no limit on how much you can earn. The reward varies per task. Task reward ranges from 5points to 500 points depending on 
+								the quality and intensity of the task. 
+								</p>
+								</p>
+								
+								
+								<h3>How much I earn per referral?</h3>
+								<p>
+								You get 5% of their total <strong>Earnings</strong>. The 5% is deducted everytime their payment are sent. Commission will be paid
+								as long as your referrals keeps on working.
+								<strong>Top referrer</strong> every month will get 10USD plus 1 percent of all earnings of all workers that are currently active.
+								</p>
+								
+								
+								<h3>Why my earnings are decreasing? </h3>
+								<p>
+								Proof of work submitted is a duplicate, invalid, incomplete, and not yet verified. Proofs of work are verified after 2 days of submission. Workers who
+								submitted an invalid/copied proof/not original/poorly written will be penalized according. The penalty is [(reward for the task / 5) * -1].
+								
+								Don't freak out if your earnings are decreasing there are times I do a system audit and improvement. I am always open to discuss your concerns. 
+								</p>
+								
+								
+								<h3>How to withdraw your earnings? </h3>
+								<p>
+								Withdrawal of all your verified earnings are released every 12 noon, Monday PST. Payments will be made thru Bitcoin and paypal  and the current market value will be use. Users with 
+								high credibility can withdraw their earnings every day. 
+								
+								For user who wants to be paid via paypal, all fees will be shouldered by the user and a minimum threshold of 50USD. 
+								</p>
+								
+								
+								
+		
+								<br>
+								<h1>GETTING STARTED<h1>
+								
+								<h3>How to submit a work? </h3>
+								<p>
+								You need to be registered or login to submit a proof of work. First you need to click "WORK" tab and choose a category that you wish
+								to work on. After that a list of task will be shown. Click "Submit Work" to view the details of the task. Each task have different details
+								and its advisable that you read them carefully before submitting your proof of work.
+								</p>
+								
+								<h3>What is a proof of work? </h3>
+								<p>
+								Proof of work is the "proof" that you completed a job. Each task needs a proof of work. They are numbered. Eg.1,2,3. You need to submit the proof
+								required accurately. Incomplete proof of work, malformed, copied, duplicate proof will not be paid.
+								All users should number their proof of work.
+								</p>
+								
+								<h3>Where can I check my earnings? </h3>
+								<p>
+								You need to be Log-in to view your earnings. You need to click "START HERE" and then click your profile tab. You will be able to see your earnings, total jobs completed,
+								number of task you verified, your username and other details.
+								</p>
+								
+								<h3>Where can I check my referrals and others? </h3>
+								<p>
+								As of today, this is not yet available but will be available soon.
+								</p>
+								
+								<h3>How long does my work be credited into my earnings? </h3>
+								<p>
+								All works are checked and verified for 2 days.
+								</p>
+								
+								<h3>What if I didn't follow the word count? </h3>
+								<p>
+								If your provided a submission with less than the minimum words required it will be rejected automatically. If its too big it will be rejected also.
+								The 10% rule should be used. For example a task requires 1000 words, 10% of that is equivalent to 100, thus if you exceed 1100 words it will be rejected
+								automatically.
+								</p>
+								
+								
+								<h3>How does my work get audited? </h3>
+								<p>
+								Moderators are auditing all work submitted. The proof is validated twice and will be credited to your available earnings once done. All users can verify proof of work submitted 
+								by other user. Another layer of verification is done through random sampling. Users who submitted fake verifications and fake proofs will be penalized accordingly. A deduction 
+								10X of their earnings will be imposed and instant deactivation of account. 
+								</p>
+								
+								<h3>Jobs completed but deleted by website owner</h3>
+								<p>
+								Always make sure that your works are available publicly. In case your work was deleted for some valid reasons before it undergoes verification, the job reward will not be 
+								credited into your account. 
+								</p>
+								
+								<h3>Offensive words not allowed.</h3>
+								<p>
+								Any indirect or direct attack towards any person beliefs, religion, race or any others will be terminated immediately. All pending earnings will not be paid. In case, a user 
+								reported another user of using offensive words with proper evidence and is proven guilty of the said violation. All the earnings available in the offenders account will be 
+								transferred to the user who reported the said offense. 
+								</p>
+								
+								<h3>Can I submit multiple proof of work?</h3>
+								<p>
+								User can submit multiple entries for a job. The proof submitted should be unique and not submitted in the past. Duplicated entries will not be paid and will be penalized accordingly. 
+								There are also task that a user can submit once. This task compensates more. 
+								</p>
+								
+								<h3>Can I edit a proof that I submitted previously</h3>
+								<p>
+								No, you can't once a proof is submitted it can't be edited. So better check your work before submitting.
+								</p>
+								
+								
+								<h3>How my earnings are calculated?</h3>
+								<p>
+								Only valid and verified jobs submitted will be paid. Only original, unique and not imitation entries are valid for receiving payment. 
+								Each proof is required and should be supplied properly. Incomplete, copied, and malformed verification is not valid for receiving payment.
+								Poorly written entries will not be paid. Every 500 reward points = 1.5USD.
+								
+								
+								
+								<h3>How to verify proof of work?</h3>
+								<p>
+								Ensure the coherence, proper use of words, and originality of the proof submitted. Use free plagiarism online[google] as needed to check if the proof is original or copied.
+								I only accept 90% original. 
+								
+								If you copied even a single paragraph that will be detected as plagiarize so better paraphrase before you submit.
+								</p>
+								
+								<h3>How to write my proof effectively?</h3>
+								<p>
+								Poorly written proofs should be mark as invalid. A proof should be properly written following the subject verb agreement. Appropriate usage of conjunction, spelling, 
+								grammar, proper usage of words should be taken into consideration and every submission should be in paragraph form.
+								You should provide all the proof required and number them accordingly. If a proof requires 3 proof of work, 3 proof of work should be provided.
+								</p>
+								
+								<h3>Do I need to make back-up of my work?</h3>
+								<p>
+								In case there is a problem with the server, it is advisable that all users should have a copy of their own works. You can place it word file with date of submission.
+								</p>
+								
+								<h3>What category should I work?</h3>
+								<p>
+								You can choose the category and task you are willing to do. You can also choose what sitting position you want, what dress to where and any others. All that matters to me
+								you complete and provide proof of work as clear as possible. You can also choose the number of hours you can work.
+								
+								</p>
+								
+								<h3>What is the best time to work?</h3>
+								<p>
+								You can work anytime you want.		
+								</p>
+								
+								<h3>Duplicate work?</h3>
+								<p>
+								This site uses plagiarism checker and Leveinstein distance algorithm to check for copied content. Users who submitted duplicate copies/copied content
+								will not be paid. Users will also be penalized accordingly through deductions of available earnings.
+								</p>
+								
+								<h3>When to verify works?</h3>
+								<p>
+								All workers are compulsary to verify proof of work submitted unless stated that "Only Administrator" can verify that task. users who are verifying task that
+								only admin can verified will be penalized accordingly.
+								</p>
+								
+								<h3>Do I get bonus?</h3>
+								<p>
+								Users providing high quality work will get 10 percent of their earnings.
+								</p>
+								
+								<h3>High Quality Workers receiving incentives?</h3>
+								<p>
+								Yes, all work submitted are audited and incentives are given to users who have provided high quality work.
+								</p>
+								
+								
+								<h1> DISPUTES <h1>
+								<h3>I provided valid proof of work but moderators marked it invalid? </h3>
+								<p>
+								You can dispute for the task if you believe that you submitted or work on the job posted. Screenshots are the only proof accepted. List of work done is sent to 
+								your email every week. In case you have provided a valid dispute, your earnings will be restored (2x) for that job and the moderator will be deducted 4X from their balance. 
+								</p>
+								
+								
+								<br>
+								<h1> OTHERS </h1>
+								<h3>Workers hired thru freelancer.com</h3>
+								<p>
+								If you are hired thru freelancer.com, you have to create invoice every Monday and it will be paid every Wednesday. Any duplicated, copied and inadequately 
+								proof of work will not be paid. 
+								</p>
+								
+								<h3>Users who are not paid due to originality issues.</h3>
+								<p>
+								If you believe that you're work are audited incorrectly you can contact me  and provide the list of "Proof ID". 
+								</p>
+								
+								<h3>Originality Issues.</h3>
+								<p>
+								Most common mistake by workers are they are copying content as it is. If you are summarizing a task it is advisable that you
+								paraphrase all sentences as much as possible.
+								</p>
+								
+								<h3>Workers who didn't receive their earnings.</h3>
+								<p>
+								You need to update your payment method. Click "Start Here" then update profile. Fill in the necessary information. 
+								You can also contact me if you need fast action. You can locate my contact information below.
+								</p>
+								
+								<h3>Incorrect Captcha</h3>
+								<p>
+								Avoid opening multiple windows and type the captcha correctly.
+								</p>
+								
+								<h3>What are priority task?</h3>
+								<p>
+								Task with "*" should be done first. This projects gives you a "multiplier" to earn faster points.
+								</p>
+								
+								<h3>My contact information</h3>
+								<p>
+								I'm always available via Skype : "xg2d1d4".
+								</p>
+								
+								
+								
+							
+							
+						</div>
+					</div>

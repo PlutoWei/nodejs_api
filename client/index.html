@@ -1,0 +1,40 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Bit Worker</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="./css/font-awesome.css"> <!-- load fontawesome -->
+	<link rel="stylesheet" href="./css/style.css"> <!-- load fontawesome -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+	$( document ).ready(function() {
+		$("#login_btn").click(function(){
+				console.log( "ready!" );
+
+		})
+	});
+	</script>
+	
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body>
+    <div id="main_index" style="background:#e0e0eb; height:250px" class="container well">
+        <div  class="jumbotron text-center">
+			<br>
+            <h1>Easy task for easy money!</h1>
+            <br>
+			 <br>
+            <p>Login or Register with:</p>
+			<br>
+         
+			
+			<button class=" btn btn-primary" id="login_btn" >Login </button>
+        </div>
+		<div id="content">
+		</div>
+    </div>
+</body>
+</html>
