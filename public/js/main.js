@@ -11,17 +11,30 @@
     if (loggedIn()) {
       $("#authenticate").css({display:"none"});
       $("#loadcredo").css({display:"none"});
+      
+      $(".dropdown").css({display: "block"});
+      $("#user-profile-menu").css({display: "block"});
+      $("#inventory_nav").css({display: "block"});
     }
     else {
       $("#user-profile-menu").css({display: "none"});
       $("#inventory_nav").css({display: "none"});
+
+      $(".dropdown").css({display: "none"});
+      $("#logout").removeClass("active");
+      $("#logout").parent().removeClass("active");
+
+      
+      $("#authenticate").css({display:"block"});
+      $("#loadcredo").css({display:"block"});
     }
   }
 
   function logOut() {
     localStorage.removeItem('token');
     localStorage.removeItem('profile');
-    location.reload();
+    
+    filterAuthFields();
   }
 
   
