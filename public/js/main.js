@@ -1,3 +1,5 @@
+
+
 (function ($) {
   "use strict";
   
@@ -28,7 +30,7 @@
   
   // Initiate the wowjs animation library
   new WOW().init();
-
+  
   // Initiate superfish on nav menu
   $('.nav-menu').superfish({
     animation: {
@@ -131,11 +133,13 @@
     layoutMode: 'fitRows'
   });
 
-  $('#portfolio-flters li').on( 'click', function() {
+  $('#portfolio-flters li').on( 'click', function(e) {
     $("#portfolio-flters li").removeClass('filter-active');
     $(this).addClass('filter-active');
 
+    
     portfolioIsotope.isotope({ filter: $(this).data('filter') });
+    
   });
 
 })(jQuery);
