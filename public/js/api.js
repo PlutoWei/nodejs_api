@@ -72,7 +72,7 @@ function ajaxAuth(){
 				$('#user_pow').show();
 				$('#unverified_work').show();
 				$('#loadcredo').hide();
-                $('#user-profile-menu').show();
+                                $('#user-profile-menu').show();
 
 				  $('#authenticate').hide();
 				  var pr = JSON.stringify(data.profile);
@@ -85,7 +85,7 @@ function ajaxAuth(){
 				  $('#register_btn').hide();
 				  $('#login_form').hide();
 				  $('#myModal .modal-header .modal-title').html('<div align= "center"> Congratulations!!! </div>');
-				  $('#login_form_status').html('<div>User Successfully Authenticated</div>').addClass("alert alert-success");
+			          $('#login_form_status').html('<div>User Successfully Authenticated</div>').addClass("alert alert-success");
 				  
 				  
 				  
@@ -630,7 +630,6 @@ $(document).ready(function(){
 
 
 
-	$('#authenticate').show();
 	$('#authenticate').click(function(){
 		authentication();
 	});
@@ -691,7 +690,7 @@ $(document).ready(function(){
 					
 					
 					$('#regCaptcha').html(x);
-					console.log(data)
+           			        console.log(data);
                     
                   
                     

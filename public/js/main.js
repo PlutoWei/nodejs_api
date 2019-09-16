@@ -1,7 +1,31 @@
 (function ($) {
   "use strict";
+  
+  function loggedIn() {
+    return localStorage.getItem('token') && !!localStorage.getItem('profile');
+  }
+  
+  function filterAuthFields() {
+    if (loggedIn()) {
+      $("#authenticate").css({display:"none"});
+      $("#loadcredo").css({display:"none"});
+    }
+    else {
+      $("#user-profile-menu").css({display: "none"});
+      $("#inventory_nav").css({display: "none"});
+    }
+  }
 
+  function logOut() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('profile');
+    location.reload();
+  }
 
+  
+  // Filter un-/auth fields
+  filterAuthFields();
+  
   // Initiate the wowjs animation library
   new WOW().init();
 
@@ -15,6 +39,7 @@
 
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
+    
     var $mobile_nav = $('#nav-menu-container').clone().prop({
       id: 'mobile-nav'
     });
@@ -27,6 +52,10 @@
     $('body').append('<div id="mobile-body-overly"></div>');
     $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
 
+    $(document).on('click','#logout',function(e){
+      logOut(); 
+    });
+    
     $(document).on('click', '.menu-has-children i', function(e) {
       $(this).next().toggleClass('menu-item-active');
       $(this).nextAll('ul').eq(0).slideToggle();
@@ -48,11 +77,17 @@
           $('#mobile-body-overly').fadeOut();
         }
       }
+
+      filterAuthFields();
+      
     });
   } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
+    
+    filterAuthFields();
+    
     $("#mobile-nav, #mobile-nav-toggle").hide();
   }
-
+  
   // Header scroll class
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
