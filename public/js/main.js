@@ -16,16 +16,24 @@
   });
   
   // Initiate the wowjs animation library
-  new WOW({offset: 400}).init();
+  new WOW({offset: 300}).init();
 
   // Hide absolute Isotope items
   
   $("nav").on('click',function(event){
-    var route = event.target.innerText;
-    if (route === "HOME")
+    var route = $(event.target).attr('href');
+    var routers = ["#register","#cart","#inventory","#portfolio"];
+    if (route === "#home") {
+      routers
+	.filter(function(a) { return a !== "#portfolio"})
+	.forEach(function(id){ $(id).hide() });
       $("#portfolio").show();
-    else if (route === "CART" || route === "INVENTORY" || route === "REGISTER")
-      $("#portfolio").hide();
+    } else {
+      routers
+	.filter(function(a) { return a !==  route})
+	.forEach(function(id){ $(id).hide() });
+      $(route).show();
+    }
   })
   
   // Initiate superfish on nav menu
