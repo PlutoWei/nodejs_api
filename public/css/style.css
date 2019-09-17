@@ -473,6 +473,7 @@ h6 {
 .nav-menu li.sfHover > a {
   text-decoration: none !important;
   color: #18d26e !important;
+  outline:none !important;
 }
 
 .nav-menu ul ul {
