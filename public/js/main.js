@@ -24,7 +24,7 @@
     var route = event.target.innerText;
     if (route === "HOME")
       $("#portfolio").show();
-    else if (route === "CART" || route === "INVENTORY")
+    else if (route === "CART" || route === "INVENTORY" || route === "REGISTER")
       $("#portfolio").hide();
   })
   
