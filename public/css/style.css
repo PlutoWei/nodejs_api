@@ -470,6 +470,11 @@ h6 {
   display: block;
 }
 
+.nav-menu li.sfHover > a {
+  text-decoration: none !important;
+  color: #18d26e !important;
+}
+
 .nav-menu ul ul {
   top: 0;
   left: 100%;
