@@ -3,7 +3,6 @@
 (function ($) {
   "use strict";
   
-
   
   // Filter un-/auth fields
   filterAuthFields();
@@ -17,7 +16,17 @@
   });
   
   // Initiate the wowjs animation library
-  new WOW().init();
+  new WOW({offset: 400}).init();
+
+  // Hide absolute Isotope items
+  
+  $("nav").on('click',function(event){
+    var route = event.target.innerText;
+    if (route === "HOME")
+      $("#portfolio").show();
+    else if (route === "CART" || route === "INVENTORY")
+      $("#portfolio").hide();
+  })
   
   // Initiate superfish on nav menu
   $('.nav-menu').superfish({
