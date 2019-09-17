@@ -165,9 +165,13 @@ h6 {
 	#logo {
 	    margin-left: 0px !important;
 	}
-	
+	#header li {
+	    float: right !important;
+	}
+	.container-fluid {
+	    padding-right: 0px !important;
+	}
     }
-
      @media screen and (min-width: 769px) and (max-width: 996px) {
 
 	#header {
@@ -177,7 +181,7 @@ h6 {
 	
     	#header #logo h1 {
 	    margin-top: 5px !important;
-    	    font-size: 17px !important;
+    	    font-size: 18px !important;
     	}
 	
 	#logo {
@@ -191,6 +195,9 @@ h6 {
 
 	#header nav {
 	    margin-top: 5px;
+	}
+	.nav-menu > li  {
+	    margin-left: 0 !important;
 	}
     }
 
@@ -208,7 +215,7 @@ h6 {
 	}
 
 	#logo {
-	    padding-left: 5px !important;
+	    padding-left: 0px !important;
 	}
 		
 	#header nav {
