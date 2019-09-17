@@ -3,68 +3,6 @@
 (function ($) {
   "use strict";
   
-  function loggedIn() {
-    return localStorage.getItem('token') && !!localStorage.getItem('profile');
-  }
-
-  function showHide(selector,show){    
-    $(selector).each(function(i,element){
-      if (show)
-        $(element).show();
-      else
-	$(element).hide();
-    })
-  }
-  
-  function showEach(selector) {
-    showHide(selector,true);
-  }
-  
-  function hideEach(selector) {
-    showHide(selector,false);
-  }
-  
-  function filterAuthFields() {
-    if (loggedIn()) {
-      $(".authenticate").hide();
-      $(".loadcredo").hide();
-
-
-      showEach(".dropdown");
-      showEach(".inventory_nav");
-      
-      $("#user-profile-menu").hide();      
-      ////////////////////////////////////////////////////////////////////////
-      // $(".inventory_nav").each(function(index,inventoryElement) {	    //
-      // 	$(inventoryElement).css({display: "block"})		    //
-      // });								    //
-      // $(".dropdown").each(function(index,dropdown) {			    //
-      // 	$(dropdown).css({display: "block"});			    //
-      // });								    //
-      ////////////////////////////////////////////////////////////////////////
-    }
-    else {
-      hideEach(".user-profile-menu");
-      
-      hideEach(".inventory_nav");
-
-      hideEach(".dropdown")
-      
-      $("#logout").removeClass("active");
-      $("#logout").parent().removeClass("active");
-
-      
-      showEach(".authenticate");
-      showEach(".loadcredo");
-    }
-  }
-
-  function logOut() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('profile');
-    
-    filterAuthFields();
-  }
 
   
   // Filter un-/auth fields
@@ -75,7 +13,6 @@
   });
 
   $(window).on('resize',function(){
-    console.log('resized');
     filterAuthFields();
   });
   

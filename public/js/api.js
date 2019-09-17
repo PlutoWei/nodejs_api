@@ -62,19 +62,23 @@ function ajaxAuth(){
 			type : 'POST',
 			data : data,
 			success: function(data){
-				$('#logout').show();
-				$('#user_profile').show();
 				$('#user_transaction').show();
 				$('#user_ref').show();
 				$('#loadCreateJob').show();
 				$('#nav_work').show();
 				//$('#nav_fountain').show();
-				$('#user_pow').show();
-				$('#unverified_work').show();
-				$('.loadcredo').hide();
-                                $('.user-profile-menu').show();
+    			        $('#user_pow').show();
+			        $('#unverified_work').show();
+			  
+			        hideEach('.authenticate');
+			        hideEach('.loadcredo');
+                                showEach('.user-profile-menu');
+				showEach('.inventory_nav');
+				showEach('.dropdown');
+				$('#register_btn').hide();
+				$('#login_form').hide();
+			  
 
-				  $('#authenticate').hide();
 				  var pr = JSON.stringify(data.profile);
 				  localStorage.setItem('token', data.token);
 				  localStorage.setItem('profile', pr);
@@ -82,10 +86,10 @@ function ajaxAuth(){
 				  
 				  var checkToken = localStorage.getItem("token");
 				  console.log("the token was saved", checkToken)
-				  $('#register_btn').hide();
-				  $('#login_form').hide();
+
 				  $('#myModal .modal-header .modal-title').html('<div align= "center"> Congratulations!!! </div>');
-			          $('#login_form_status').html('<div>User Successfully Authenticated</div>').addClass("alert alert-success");
+			  $('#login_form_status').html('<div>User Successfully Authenticated</div>').addClass("alert alert-success");
+			           
 				  
 				  
 				  
