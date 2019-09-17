@@ -1010,7 +1010,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio .portfolio-item {
   position: relative;
-  height: 360px;
+  min-height: 380px;
   overflow: hidden;
 }
 
@@ -1111,6 +1111,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
   text-transform: uppercase;
 }
+
+#portfolio .portfolio-item .portfolio-info {
+    overflow: hidden;
+}
+
+#portfolio .portfolio-item:hover .portfolio-info {
+    top: 100%;
+    min-height: 90px;
+    height: auto;
+}
+
 
 /* Clients Section
 --------------------------------*/
