@@ -16,9 +16,8 @@ require("../config/passport")(passport);
 // Register new users
 router.post("/register", function(req, res) {
   //find regCaptcha
-  var captcha = req.body.user_captcha;
-  var captcha_id = req.body._id;
-  console.log("We are here", captcha);
+  var captcha = req.body.captcha;
+  var captcha_id = req.body.captcha_id;
   var lowerCase = captcha.toLowerCase();
   rCaptcha.findOne({ _id: captcha_id }, function(err, captcha) {
     if (err) {
@@ -42,12 +41,10 @@ router.post("/register", function(req, res) {
         User.findOne({ email: req.body.email }, function(err, user) {
           console.log(req.body.email, req.body.password);
           if (user) {
-            return res
-              .status(400)
-              .json({
-                success: false,
-                message: "That email address already exists."
-              });
+            return res.status(400).json({
+              success: false,
+              message: "That email address already exists."
+            });
           } else {
             var crypto = require("crypto"),
               password = req.body.password,
@@ -67,26 +64,23 @@ router.post("/register", function(req, res) {
               first_name: req.body.firstname,
               last_name: req.body.lastname,
               country: req.body.country,
-              phone_number: req.body.phone_number
+              phone_number: req.body.phone_number,
+              userType: req.body.userType
             });
 
             // Attempt to save the user
             newUser.save(function(err, user) {
               if (err) {
-                return res
-                  .status(400)
-                  .json({
-                    success: false,
-                    message: "That email address already exists."
-                  });
+                return res.status(400).json({
+                  success: false,
+                  message: "That email address already exists."
+                });
               }
               console.log("Here is the user detail", user);
-              res
-                .status(201)
-                .json({
-                  success: true,
-                  message: "Successfully created new user."
-                });
+              res.status(201).json({
+                success: true,
+                message: "Successfully created new user."
+              });
             });
           }
         });
@@ -102,12 +96,10 @@ router.post("/authenticate", function(req, res) {
     if (err) throw err;
 
     if (!user) {
-      res
-        .status(401)
-        .json({
-          success: false,
-          message: "Authentication failed. User not found."
-        });
+      res.status(401).json({
+        success: false,
+        message: "Authentication failed. User not found."
+      });
     } else {
       // Check if password matches
       var crypto = require("crypto"),
@@ -128,12 +120,10 @@ router.post("/authenticate", function(req, res) {
           .status(200)
           .json({ success: true, token: "jwt " + token, profile: profile });
       } else {
-        res
-          .status(401)
-          .json({
-            success: false,
-            message: "Authentication failed. Passwords did not match."
-          });
+        res.status(401).json({
+          success: false,
+          message: "Authentication failed. Passwords did not match."
+        });
       }
     }
   });
