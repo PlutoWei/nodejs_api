@@ -11,7 +11,7 @@ var svgCaptcha = require("svg-captcha");
 var User = require("../models/user");
 var rCaptcha = require("../models/regcaptcha");
 
-require("../config/passport")(passport);
+// require("../config/passport")(passport);
 
 // Register new users
 router.post("/register", function(req, res) {

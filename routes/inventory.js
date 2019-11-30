@@ -28,10 +28,30 @@ function getDetailInventory(id, callback) {
   });
 }
 
-function getInventorybyCategory(product_category, skip, limit, callback) {
-  const query = Inventory.find(
+function countInventoryByCategory(product_category, callback) {
+  console.log("Finishing");
+  Inventory.countDocuments({ product_category: product_category }, function(
+    err,
+    res
+  ) {
+    if (err) {
+      return err;
+    }
+    console.log("The count " + res);
+    callback(err, res);
+  });
+}
+
+function getInventorybyCategory(product_category, size, pageNo, callback) {
+  let query = {};
+
+  query.skip = size * (pageNo - 1);
+  query.limit = size;
+  console.log(query);
+  return Inventory.find(
     { product_category: product_category },
-    { skip: skip, limit: limit },
+    {},
+    query,
     function(err, res) {
       // In case of any error, return using the done method.
       if (err) {
@@ -42,10 +62,6 @@ function getInventorybyCategory(product_category, skip, limit, callback) {
       callback(err, res);
     }
   );
-  query.select(
-    "product_name product_image product_description product_price stock_number"
-  );
-  return query;
 }
 
 function getInventoryAll(limit, callback) {
@@ -215,18 +231,30 @@ router.post("/read/:_id", requireAuth, function(req, res) {
   });
 });
 
-router.post("/read/:category/:skip/:limit", function(req, res) {
-  var category = req.params.category;
-  var skip = req.params.skip;
-  var limit = req.params.limit;
-  getInventorybyCategory(category, skip, limit, function(err, result) {
+router.get("/read/:category/:pageNo/:size", async function(req, res) {
+  console.log("I ama here");
+  let category = req.params.category;
+  let pageNo = parseInt(req.params.pageNo);
+  let size = parseInt(req.params.size);
+  console.log(category, pageNo, size);
+  if (pageNo < 0 || pageNo === 0) {
+    return res.json({ success: false, message: "Invalid page Number" });
+  }
+
+  countInventoryByCategory(category, function(err, res) {
     if (err) {
+      res.json({ success: false, message: "Error Fetching data" });
+    }
+  });
+
+  await getInventorybyCategory(category, size, pageNo, function(err, data) {
+    if (err) {
+      res.json({ success: false, message: "Error Fetching data" });
+    } else {
       res.json({
         success: false,
-        message: "An error occurred"
+        message: data
       });
-    } else {
-      res.json(result);
     }
   });
 });
