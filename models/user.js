@@ -17,7 +17,7 @@ var userSchema = new Schema({
   depositAddress: String,
   password: { type: String, min: 5, max: 50 },
   updated: { type: Date, default: Date.now },
-  userType: { type: String, default: "customer" },
+  userType: { type: String, enum: ["customer", "admin"] },
   referrer: { type: String, min: 5, max: 100 },
   withdrawal_type: { type: String, min: 5, max: 100 },
   withdrawal_address: { type: String, min: 5, max: 500 },
